@@ -15,3 +15,5 @@ I pasted the new DDL into after.qsl file. I started the note header for the quer
 and it already knew what my next lines were going to be for the querey.  So I didn't use an AI model like Copilot for help
 with those queries.  I am assuming it was a built in AI in VS Code that knew what my next lines were going to be.
 They looked correct so I kept them.
+
+I also used AI to help with some of the errors I was getting due to duplicate creates for tables and for the TotalLine having and issue in the query. 
