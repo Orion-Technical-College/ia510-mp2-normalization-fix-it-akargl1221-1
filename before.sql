@@ -1,6 +1,8 @@
 -- Intentionally denormalized "spreadsheet" table for the fix-it scenario.
 -- Replace/extend with your instructor-provided messy table as needed.
 
+DROP TABLE IF EXISTS orders_denorm CASCADE;
+
 CREATE TABLE IF NOT EXISTS orders_denorm (
     orderid TEXT PRIMARY KEY,
     customer_name TEXT NOT NULL,

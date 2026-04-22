@@ -7,6 +7,14 @@
 -- Then I added the query to find TotalAmount and LineTotal at the end of the file.
 --==========================
 
+
+DROP TABLE IF EXISTS order_line CASCADE;
+DROP TABLE IF EXISTS orders CASCADE;
+DROP TABLE IF EXISTS product CASCADE;
+DROP TABLE IF EXISTS customer CASCADE;
+DROP TABLE IF EXISTS supplier CASCADE;
+DROP TABLE IF EXISTS sales_rep CASCADE;
+
 -- =========================
 -- CUSTOMER
 -- =========================
