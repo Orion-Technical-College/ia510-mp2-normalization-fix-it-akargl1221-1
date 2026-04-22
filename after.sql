@@ -1,5 +1,3 @@
--- Your normalized schema + migration from `before.sql`.
--- Starter placeholder: valid SQL so CI stays green; replace with your real DDL/DML.
 --==========================
 -- So I  took my ddl scema from ia510-mp1 and normallized it.  Only ORDERS and ORDER_LINE needed to be fixed.
 -- Removed TotalAmount from ORDERS and LineTotal from ORDER_LINE.  These can be derived via query.
@@ -8,12 +6,12 @@
 --==========================
 
 
-DROP TABLE IF EXISTS order_line CASCADE;
-DROP TABLE IF EXISTS orders CASCADE;
-DROP TABLE IF EXISTS product CASCADE;
-DROP TABLE IF EXISTS customer CASCADE;
-DROP TABLE IF EXISTS supplier CASCADE;
-DROP TABLE IF EXISTS sales_rep CASCADE;
+--DROP TABLE IF EXISTS order_line CASCADE;
+--DROP TABLE IF EXISTS orders CASCADE;
+--DROP TABLE IF EXISTS product CASCADE;
+--DROP TABLE IF EXISTS customer CASCADE;
+--DROP TABLE IF EXISTS supplier CASCADE;
+--DROP TABLE IF EXISTS sales_rep CASCADE;
 
 -- =========================
 -- CUSTOMER
