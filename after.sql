@@ -6,12 +6,14 @@
 --==========================
 
 
---DROP TABLE IF EXISTS order_line CASCADE;
---DROP TABLE IF EXISTS orders CASCADE;
---DROP TABLE IF EXISTS product CASCADE;
---DROP TABLE IF EXISTS customer CASCADE;
---DROP TABLE IF EXISTS supplier CASCADE;
---DROP TABLE IF EXISTS sales_rep CASCADE;
+DROP TABLE IF EXISTS order_line CASCADE;
+DROP TABLE IF EXISTS orders CASCADE;
+DROP TABLE IF EXISTS product CASCADE;
+DROP TABLE IF EXISTS customer CASCADE;
+DROP TABLE IF EXISTS supplier CASCADE;
+DROP TABLE IF EXISTS sales_rep CASCADE;
+DROP TABLE IF EXISTS warehouse CASCADE;
+drop table if exists inventory cascade;
 
 -- =========================
 -- CUSTOMER
@@ -106,7 +108,7 @@ CREATE TABLE ORDER_LINE (
         REFERENCES ORDERS(OrderID),
     CONSTRAINT fk_orderline_product
         FOREIGN KEY (ProductID)
-        REFERENCES PRODUCT(ProductID),
+        REFERENCES PRODUCT(ProductID)
 );
 
 -- =========================
@@ -129,13 +131,15 @@ CREATE TABLE INVENTORY (
         UNIQUE (ProductID, WarehouseID)
 );
 
---How to find TotalAmount that was in ORDERS Derived via query
-SELECT OrderID, SUM(LineTotal) AS TotalAmount
-FROM ORDER_LINE
-GROUP BY OrderID;
-
 --How to find LineTotal that was in ORDER_LINE Derived via query
 SELECT OrderLineID, Quantity * UnitPrice AS LineTotal
 FROM ORDER_LINE;
+
+--How to find TotalAmount that was in ORDERS Derived via query
+SELECT OrderID, SUM(Quantity * UnitPrice) AS TotalAmount
+FROM ORDER_LINE
+GROUP BY OrderID;
+
+
 
 
