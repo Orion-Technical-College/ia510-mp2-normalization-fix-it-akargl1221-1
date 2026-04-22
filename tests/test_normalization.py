@@ -10,8 +10,7 @@ def _exec_script(conn, path: pathlib.Path) -> None:
                 for ln in raw.splitlines()
                 if ln.strip() and not ln.strip().startswith("--")
             ]
-            stmt = "
-".join(lines).strip()
+            stmt = "\n".join(lines).strip()
             if stmt:
                 cur.execute(stmt)
 

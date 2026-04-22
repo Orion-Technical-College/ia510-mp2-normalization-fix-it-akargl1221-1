@@ -32,7 +32,7 @@ Decompose a denormalized design into a normalized model and migrate data safely.
 ```bash
 docker compose up -d
 pip install -r requirements-dev.txt
-export PGHOST=localhost PGPORT=5432 PGDATABASE=ia510 PGUSER=ia510_user PGPASSWORD=ia510_pass
+export PGHOST=localhost PGPORT=5434 PGDATABASE=ia510 PGUSER=ia510_user PGPASSWORD=ia510_pass
 pytest -q
 docker compose down -v
 ```
